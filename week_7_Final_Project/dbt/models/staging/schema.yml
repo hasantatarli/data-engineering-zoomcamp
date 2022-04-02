@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+    - name: staging
+      database: dtc-de-course-338707
+      schema: bicycle_data
+
+      tables:
+        - name: BicycleJourney
+
+models:
+  - name: stg_bicycle_journeydata
+    columns:
+      - name: tripid
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+      - name: rental_id
+      - name: duration
+      - name: bike_id
+      - name: pickup_datetime
+      - name: start_station_id
+        tests:
+          - relationships:
+              to: ref('bicycle_zones_lookup')
+              field: locationid
+              severity: warn
+      - name: dropoff_datetime
+      - name: end_station_id
+        tests:
+          - relationships:
+              to: ref('bicycle_zones_lookup')
+              field: locationid
+              severity: warn
+      - name: bicycle_type_id
+        tests: 
+          - accepted_values:
+              values: "{{ var('bicycle_type_values') }}"
+              severity: warn
+              quote: false
+      - name: bicycle_type_description
