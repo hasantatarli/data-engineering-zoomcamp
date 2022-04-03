@@ -3,7 +3,7 @@ locals {
 }
 
 variable "project" {
-  description = "Your 3746 Project ID"
+  description = "Your GCP Project ID"
 }
 
 variable "region" {
