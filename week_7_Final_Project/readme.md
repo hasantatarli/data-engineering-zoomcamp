@@ -6,15 +6,37 @@ The aim of this project is to analyize distribution of bicycle type usage, trips
 Data source: https://cycling.data.tfl.gov.uk/
 Data Dictionary:
     <table>
-        <th>Bicycle Usage Data Dictionary</th>
+        <th colspan=8>Bicycle Usage Data Dictionary</th>
         <tr>
             <td>Rental_Id</td>
+            <td>incremental rental id</td>
+        </tr>
+        <tr>
             <td>Duration</td>
+            <td>Trip duration in minutes</td>
+        </tr>
+        <tr>
             <td>Bike_Id</td>
+            <td>Bicycle Id</td>
+        </tr>
+        <tr>
             <td>Start_Date</td>
+            <td>Bicycle usage start date & time</td>
+        </tr>
+        <tr>
             <td>StartStation_Id</td>
+            <td>Station Id where the trip starts</td>
+        </tr>
+        <tr>
             <td>End_Date</td>
+            <td>Bicycle usage end date & time</td>
+        </tr>
+        <tr>
             <td>EndStation_Id</td>
+            <td>Station Id where the trip ends</td>
+        </tr>
+        <tr>
             <td>BicycleType_Id</td>
+            <td>Bicycle type id  </td>
         </tr>
     </table>
