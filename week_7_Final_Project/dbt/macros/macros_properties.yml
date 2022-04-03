@@ -1,0 +1,7 @@
+version: 2
+
+macros:
+  - name: get_bicycle_type_description
+    arguments:
+      - name: bicycle_type_id
+        type: int
