@@ -40,3 +40,6 @@ Data Dictionary:
             <td>Bicycle type id  </td>
         </tr>
     </table>
+    
+![image](https://user-images.githubusercontent.com/13220471/161433977-3a1487d9-89a3-4d15-be73-ff086692dcc4.png)
+    
