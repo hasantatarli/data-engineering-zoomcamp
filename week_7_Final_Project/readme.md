@@ -42,5 +42,12 @@ Data Dictionary:
     </table>
     
 ## Used Technologies    
+In this project, the below technologies are used to succeed.
 ![image](https://user-images.githubusercontent.com/13220471/161433977-3a1487d9-89a3-4d15-be73-ff086692dcc4.png)
+
+The source of data is from website (https://cycling.data.tfl.gov.uk/) and are downloaded to Google Cloud VM via python script (web_2_gsc.py).
+
+* Apache Airflow Docker on Google VM, Data lake in Google Cloud Storage, BigQuery for DWH, Google Data Studio for Visulization
+* dbt cloud is used for data transformation and building reporting tables.
+* 
     
