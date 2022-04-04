@@ -98,7 +98,7 @@ There are three graphs;
 3. Install python, java, docker, terraform and git.
 4. Clone the codes from git repository and change the codes to the new environment. 
     * terraform: main.tf, variables.tf
-    * airflow: docker-compose.yaml, web_to_gsc.py for getting initial data
+    * airflow: docker-compose.yaml
 5. create another google service accout for dbt cloud and give the proper permissions. 
 6. create dataset for dbt staging environment. 
 7. start the dbt jobs for transformations.
