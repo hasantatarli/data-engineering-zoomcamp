@@ -91,6 +91,17 @@ There are three graphs;
 ![image](https://user-images.githubusercontent.com/13220471/161500892-67f6c79b-d5a9-4e6a-aff1-8a6f45306ebf.png)
 
 
+## Reproduction
+1. Create VM on Google Cloud and install Ubuntu 20.04
+2. Create google service account and give proper permissions. 
+3. Install python, java, docker, terraform and git.
+4. Clone the codes from git repository and change the codes to the new environment. 
+    * terraform: main.tf, variables.tf
+    * airflow: docker-compose.yaml, web_to_gsc.py for getting initial data
+5. create another google service accout for dbt cloud and give the proper permissions. 
+6. create dataset for dbt staging environment. 
+7. start the dbt jobs for transformations.
+
 
 
 
