@@ -1,6 +1,4 @@
-
 from datetime import datetime,date,timedelta
-import wget
 import io
 import os
 import requests
@@ -31,8 +29,11 @@ def web_to_gcs():
         date_nextime = start_date + timedelta(days=6)
         file_name = str(x)+ "JourneyDataExtract"+start_date.strftime("%d%b%Y")+"-"+date_nextime.strftime("%d%b%Y")+".csv"
         request_url = init_url + file_name 
-        wget.download(request_url)
-        df = pd.read_csv(file_name)
+        r = requests.get(request_url)
+        pd.DataFrame(io.StringIO(r.text)).to_csv(file_name)
+        print(f"Local: {file_name}")
+        df = pd.read_csv(request_url)
+        df.to_csv(file_name,index=False)
         file_name = file_name.replace('.csv', '.parquet')
         df.to_parquet(file_name, engine='pyarrow')
         print(f"Parquet: {file_name}")
@@ -49,5 +50,3 @@ def upload_to_gcs(bucket, object_name, local_file):
     blob = bucket.blob(object_name)
     blob.upload_from_filename(local_file)
 
-
-web_to_gcs()
